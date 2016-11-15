@@ -12,6 +12,10 @@ import { LogService } from './services/log.service';
 import { RouterExtensions } from './services/router-extensions';
 import { WindowService } from './services/window.service';
 
+// kendo ui
+import { GridModule } from '@progress/kendo-angular-grid';
+
+
 interface ICoreModuleOptions {
   window?: any;
   console?: any;
@@ -25,7 +29,8 @@ interface ICoreModuleOptions {
   imports: [
     CommonModule,
     RouterModule,
-    HttpModule
+    HttpModule,
+    GridModule
   ],
   declarations: [
     PlatformDirective
@@ -35,7 +40,8 @@ interface ICoreModuleOptions {
     FormsModule,
     RouterModule,
     HttpModule,
-    PlatformDirective
+    PlatformDirective,
+    GridModule
   ],
   providers: [
     ConsoleService,

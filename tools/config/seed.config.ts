@@ -336,7 +336,9 @@ export class SeedConfig {
     packageConfigPaths: [
       `/node_modules/*/package.json`,
       `/node_modules/**/package.json`,
-      `/node_modules/@angular/*/package.json`
+      `/node_modules/@angular/*/package.json`,
+      `/node_modules/@progress/*/package.json`,
+      `/node_modules/@telerik/*/package.json`
     ],
     paths: {
       [this.BOOTSTRAP_MODULE]: `${this.APP_BASE}${this.BOOTSTRAP_MODULE}`,
@@ -358,6 +360,10 @@ export class SeedConfig {
       '@angular/platform-browser-dynamic/testing':
         'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
+      '@progress/kendo-angular-grid': 'node_modules/@progress/kendo-angular-grid/dist/npm/js/main.js',
+      '@progress/kendo-angular-intl': 'node_modules/@progress/kendo-angular-intl/dist/npm/js/main.js',
+      '@progress/kendo-data-query': 'node_modules/@progress/kendo-data-query/dist/npm/js/main.js',
+      '@telerik/kendo-intl': 'node_modules/@telerik/kendo-intl/dist/npm/js/main.js',
 
       'rxjs/*': 'node_modules/rxjs/*',
       'app/*': '/app/*',
@@ -385,7 +391,9 @@ export class SeedConfig {
     defaultJSExtensions: true,
     packageConfigPaths: [
       join(this.PROJECT_ROOT, 'node_modules', '*', 'package.json'),
-      join(this.PROJECT_ROOT, 'node_modules', '@angular', '*', 'package.json')
+      join(this.PROJECT_ROOT, 'node_modules', '@angular', '*', 'package.json'),
+      join(this.PROJECT_ROOT, 'node_modules', '@progress', '*', 'package.json'),
+      join(this.PROJECT_ROOT, 'node_modules', '@telerik', '*', 'package.json')
     ],
     paths: {
       [`${this.TMP_DIR}/*`]: `${this.TMP_DIR}/*`,
@@ -430,7 +438,53 @@ export class SeedConfig {
       },
       'rxjs': {
         defaultExtension: 'js'
-      }
+      },
+      "@progress/kendo-angular-grid": {"main":"./dist/npm/js/main.js","defaultExtension":"js"},
+
+      '@telerik/kendo-inputs-common': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@telerik/kendo-draggable': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/Draggable.js"
+      },
+      '@telerik/kendo-dropdowns-common': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@telerik/kendo-intl': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-angular-intl': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-angular-popup': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-angular-resize-sensor': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-charts': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-drawing': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-data-query': {
+	  defaultExtension: 'js',
+	  main: "./dist/npm/js/main.js"
+      },
+      '@progress/kendo-popup-common': {
+          defaultExtension: 'js',
+          main: "./dist/npm/js/main.js"
+      },
     }
   };
 
